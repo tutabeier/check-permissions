@@ -1,0 +1,14 @@
+{
+  "name": "check-permissions",
+  "version": "0.0.5",
+  "description": "Check and prints packages that requires native Node modules such as FS, HTTP, HTTPS and others",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "bin": {
+    "check-permissions": "bin/index.js"
+  },
+  "author": "Lucas Falk Beier <lucas.beier@gmail.com>",
+  "license": "ISC"
+}
