@@ -1,6 +1,6 @@
 {
   "name": "check-permissions",
-  "version": "0.0.5",
+  "version": "0.0.8",
   "description": "Check and prints packages that requires native Node modules such as FS, HTTP, HTTPS and others",
   "main": "index.js",
   "scripts": {
@@ -10,5 +10,8 @@
     "check-permissions": "bin/index.js"
   },
   "author": "Lucas Falk Beier <lucas.beier@gmail.com>",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "mustache": "^2.3.0"
+  }
 }

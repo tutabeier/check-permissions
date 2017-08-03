@@ -1,4 +1,5 @@
 #!/usr/bin/env node
+const Mustache = require('mustache')
 
 const fs = require('fs')
 const path = require('path')
@@ -50,9 +51,10 @@ const searchForPermissions = (filePath) => {
   }
 
   if (permissions.length > 0) {
-    const returnedObject = {}
-    returnedObject[filePath] = permissions
-    return returnedObject
+    return {
+      filePath,
+      permissions
+    }
   }
 }
 
@@ -61,4 +63,7 @@ findFromDir(nodeModulesFolder)
 const permissions = javascriptFiles
   .map(searchForPermissions)
   .filter(element => element != undefined)
-console.log(permissions)
+const templateLocation = path.resolve(__dirname, '..', 'templates')
+const template = fs.readFileSync(templateLocation + '/index.html')
+const output = Mustache.render(template.toString(), {'permissions': permissions} )
+console.log(output)
