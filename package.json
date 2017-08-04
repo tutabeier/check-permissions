@@ -1,6 +1,6 @@
 {
   "name": "check-permissions",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Check and prints packages that requires native Node modules such as FS, HTTP, HTTPS and others",
   "keywords": ["check", "dependencies"],
   "repository": {
