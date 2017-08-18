@@ -1,8 +1,11 @@
 {
   "name": "check-permissions",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "Check and prints packages that requires native Node modules such as FS, HTTP, HTTPS and others",
-  "keywords": ["check", "dependencies"],
+  "keywords": [
+    "check",
+    "dependencies"
+  ],
   "repository": {
     "type": "git",
     "url": "https://github.com/tutabeier/check-permissions"
@@ -10,9 +13,8 @@
   "bugs": {
     "url": "https://github.com/tutabeier/check-permissions/issues"
   },
-  "main": "index.js",
+  "main": "lib/index.js",
   "scripts": {
-    "test": "mocha test/**.spec.js -r chai/register-expect"
   },
   "bin": {
     "check-permissions": "lib/index.js"
@@ -21,10 +23,5 @@
   "license": "ISC",
   "dependencies": {
     "mustache": "^2.3.0"
-  },
-  "devDependencies": {
-    "chai": "^4.1.0",
-    "mocha": "^3.5.0",
-    "sinon": "^3.0.0"
   }
 }
